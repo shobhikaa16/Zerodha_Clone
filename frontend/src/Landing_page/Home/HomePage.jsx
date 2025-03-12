@@ -9,6 +9,7 @@ import OpenAccount from '../OpenAccount'
 import Footer from '../Footer'
 
 
+
 function HomePage() {
   return (
     <>  
