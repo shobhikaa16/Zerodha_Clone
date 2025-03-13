@@ -1,8 +1,12 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <div> 
+      <FontAwesomeIcon icon={faEnvelope} />
+    </div>
   )
 }
 
