@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Navbar />
-      <main>
+      <main style={{ paddingTop: "80px" }}>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
