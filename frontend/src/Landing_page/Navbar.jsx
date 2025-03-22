@@ -1,45 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom"; // Import NavLink from react-router-dom
+import { faBars } from "@fortawesome/free-solid-svg-icons"; 
 
 function MyNavbar() {
   return (
-    <Navbar expand="lg" className="bg-white border-bottom " fixed="top">
+    <Navbar expand="lg" className="bg-white border-bottom mb-5" fixed="top">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           <img
             src="/images/logo.svg"
-            alt=""
-            className="p-3 ms-5 "
+            alt="Logo"
+            className="p-3 ms-5"
             style={{ width: "24%" }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto d-flex gap-4 fs-6 hover:text-primary">
-            <NavLink className="nav-link text-dark" to="/signup">
+          <Nav className="me-auto d-flex gap-4 fs-6">
+            <Nav.Link as={Link} to="/signup" className="text-dark">
               Signup
-            </NavLink>
-            <NavLink className="nav-link text-dark" to="/about">
+            </Nav.Link>
+            <Nav.Link as={Link} to="/about" className="text-dark">
               About
-            </NavLink>
-            <NavLink className="nav-link text-dark" to="/product">
+            </Nav.Link>
+            <Nav.Link as={Link} to="/products" className="text-dark">
               Products
-            </NavLink>
-            <NavLink className="nav-link text-dark" to="/pricing">
+            </Nav.Link>
+            <Nav.Link as={Link} to="/pricing" className="text-dark">
               Pricing
-            </NavLink>
-            <NavLink className="nav-link text-dark" to="/support">
+            </Nav.Link>
+            <Nav.Link as={Link} to="/support" className="text-dark">
               Support
-            </NavLink>
-            {/* FontAwesome icon for menu */}
-            <a href="#" className="text-dark mt-2 ms-1 ">
+            </Nav.Link>
+            <Nav.Link as={Link} to="/menu" className="text-dark mt-2 ms-1">
               <FontAwesomeIcon icon={faBars} size="lg" />
-            </a>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
