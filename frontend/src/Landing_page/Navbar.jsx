@@ -7,13 +7,13 @@ import { faBars } from "@fortawesome/free-solid-svg-icons"; // Import the icon
 
 function MyNavbar() {
   return (
-    <Navbar expand="lg" className="bg-white border-bottom">
+    <Navbar expand="lg" className="bg-white border-bottom " fixed="top">
       <Container>
         <Navbar.Brand href="#home">
           <img
             src="/images/logo.svg"
             alt=""
-            className="p-3 ms-5"
+            className="p-3 ms-5 "
             style={{ width: "24%" }}
           />
         </Navbar.Brand>
