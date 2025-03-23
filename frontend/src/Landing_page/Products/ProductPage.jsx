@@ -17,7 +17,13 @@ function ProductPage() {
         googlePlay=""
         appstore=""
       />
-      <RightSection />
+      <RightSection
+      imageURL="/images/products-console.png"
+      productName="Console"
+      productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
+      tryDemo=""
+      learnMore=""
+       />
       <LeftSection
         imageURL="/images/coin.png"
         productName="Coin"
@@ -27,7 +33,13 @@ function ProductPage() {
         googlePlay=""
         appstore=""
       />
-      <RightSection />
+      <RightSection 
+      imageURL="/images/kiteconnect.png"
+      productName="Kite Connect API"
+      productDescription="Build powerful trading platforms and experiences with our super simple HTTP/JSON APIs. If you are a startup, build your investment app and showcase it to our clientbase."
+      tryDemo=""
+      learnMore=""
+      />
       <LeftSection
         imageURL="/images/varsity.png"
         productName="Varsity mobile"
