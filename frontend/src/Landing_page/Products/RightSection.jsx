@@ -6,7 +6,6 @@ function RightSection({
   imageURL,
   productName,
   productDescription,
-
   learnMore,
 }) {
   return (
