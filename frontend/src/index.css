@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+#supportHero{
+  background-color: #407cd4;
+}
+
+#supportWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 150px;
+}
+input::placeholder {
+  color: darkgray !important;
+  opacity: 1; /* Ensures full visibility */
+}
+input {
+  color: gray;  /* Changes input text color */
+}
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
