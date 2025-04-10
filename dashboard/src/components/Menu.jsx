@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 function Menu() {
-    const [selectedMenu,setSelectedMenu] = useState(0);
-    const [isProfileDropdownOpen,setisProfileDropdownOpen] = useState(false);
+    const [selectedMenu, setSelectedMenu] = useState(0);
+    const [isProfileDropdownOpen, setisProfileDropdownOpen] = useState(false);
 
     // function to detect the click
     const handleMenuClick = (index) =>{
@@ -69,7 +69,7 @@ function Menu() {
               <li>
                 <Link
                   style={{ textDecoration: "none" }}
-                  to="funds"
+                  to="/funds"
                   onClick={() => handleMenuClick(4)}
                 >
                   <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
@@ -81,9 +81,9 @@ function Menu() {
                 <Link
                   style={{ textDecoration: "none" }}
                   to="/apps"
-                  onClick={() => handleMenuClick(6)}
+                  onClick={() => handleMenuClick(5)}
                 >
-                  <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
+                  <p className={selectedMenu === 5 ? activeMenuClass : menuClass}>
                     Apps
                   </p>
                 </Link>
@@ -94,6 +94,7 @@ function Menu() {
               <div className="avatar">ZU</div>
               <p className="username">USERID</p>
             </div>
+            
           </div>
         </div>
       );
