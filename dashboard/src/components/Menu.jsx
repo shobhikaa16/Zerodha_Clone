@@ -20,8 +20,8 @@ function Menu() {
     return (
         <div className="menu-container">
           <img src="images/kiteLogo.png" style={{ width: "50px" }} />
-          <div className="menus">
-            <ul>
+          <div className="menus" >
+            <ul >
               <li>
                 <Link
                   style={{ textDecoration: "none" }}
