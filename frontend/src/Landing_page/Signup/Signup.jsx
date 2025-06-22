@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios from '../../util/AxiosConfig'; // axios instance with baseURL + credentials
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Signup() {
   const [formData, setFormData] = useState({
-    name: '',
+    username: '',
     email: '',
     password: '',
   });
@@ -21,12 +22,9 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:3002/register', formData, {
-        withCredentials: true, // allows cookies to be sent
-      });
-
+      const res = await axios.post('/signup', formData);
       setMessage('✅ Signup successful! You can now log in.');
-      setFormData({ name: '', email: '', password: '' }); // reset
+      setFormData({ username: '', email: '', password: '' });
     } catch (err) {
       console.error(err);
       setMessage('❌ Signup failed. Email may already exist or server error.');
@@ -34,43 +32,55 @@ function Signup() {
   };
 
   return (
-    <div className="signup-container">
-      <h2>Signup</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <br />
+    <div className="container d-flex flex-column align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
+      <h2 className="mb-4">Signup</h2>
+      <form className="w-100" style={{ maxWidth: '400px' }} onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label htmlFor="username" className="form-label">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            className="form-control"
+            placeholder="Enter your username"
+            value={formData.username}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <br />
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className="form-control"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-        <br />
+        <div className="mb-4">
+          <label htmlFor="password" className="form-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            className="form-control"
+            placeholder="Enter your password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="btn btn-primary w-100">Sign Up</button>
       </form>
 
-      {message && <p>{message}</p>}
+      {message && <p className="mt-3 text-center">{message}</p>}
     </div>
   );
 }

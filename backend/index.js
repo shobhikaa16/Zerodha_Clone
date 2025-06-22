@@ -30,7 +30,7 @@ mongoose.connect(url, {
 // 🟢 Middleware Setup
 app.use(
   cors({
-    origin: ["http://localhost:3002"], // yeh dono origins allow kiye hai, kyuki frontend aur backend dono alag alag ports par chal rahe hai
+    origin: ["http://localhost:3002","http://localhost:5173"], // yeh dono origins allow kiye hai, kyuki frontend aur backend dono alag alag ports par chal rahe hai
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
