@@ -1,3 +1,4 @@
+
 [build]
   base = "frontend"
   publish = "frontend/dist"
@@ -5,3 +6,4 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  VITE_BACKEND_URL = "https://zerodha-backend-c8sc.onrender.com"
