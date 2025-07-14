@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://zerodha-backend-c8sc.onrender.com/',
+  baseURL: import.meta.env.VITE_BACKEND_URL, // uses .env backend URL
   withCredentials: true, // important for cookie-based auth
 });
 
