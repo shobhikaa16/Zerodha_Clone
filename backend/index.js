@@ -285,6 +285,6 @@ app.get('/allPositions', async(req,res)=>{// this is an api endpoint for positio
     res.json(allPositions);
 });
 
-app.listen(PORT, ()=>{
-    console.log(`🚀 Server started on http://localhost:${PORT}`);
-});
+// app.listen(PORT, ()=>{
+//     console.log(`🚀 Server started on http://localhost:${PORT}`);
+// });
